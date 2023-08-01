@@ -25,4 +25,10 @@ public class MyFirstController {
 				+ "A user can have multiple reservations in progress, but cannot reserve more than one seat for a particular date.\n"
 				+ "A seat reservation request can be made up to two days before the chosen date.";
 	}
+
+	@GetMapping("/")
+	public String othersRules() {
+		return "oops! Le lingue disponibili sono italiano ed inglese.\n"
+				+ "oops! The available languages are Italian and English.";
+	}
 }
