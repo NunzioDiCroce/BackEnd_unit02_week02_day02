@@ -47,4 +47,23 @@ public class UtenteService {
 		}
 
 	}
+
+	// METODO PER AGGIORNARE UN UTENTE SPECIFICO
+	public Optional<Utente> aggiornaUtentePerId(long id, Utente utente) {
+		Utente utenteCercato = null;
+		for (Utente utenteCorrente : utenti) {
+			if (utenteCorrente.getId() == id) {
+				utenteCercato = utenteCorrente;
+				utenteCercato.setUserName(utente.getUserName());
+				utenteCercato.setNome(utente.getNome());
+				utenteCercato.setMail(utente.getMail());
+				utenteCercato.setPrenotazioni(utente.getPrenotazioni());
+
+			}
+
+		}
+		return Optional.ofNullable(utenteCercato);
+
+	}
+
 }
