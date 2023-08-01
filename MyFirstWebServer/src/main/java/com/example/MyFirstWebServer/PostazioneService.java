@@ -13,7 +13,7 @@ public class PostazioneService {
 	// DEFINIZIONE ARRAYLIST DI POSTAZIONI
 	private List<Postazione> postazioni = new ArrayList<>();
 
-	// METODO PER SALVARE UN UTENTE IN ARRAYLIST
+	// METODO PER SALVARE UNA POSTAZIONE IN ARRAYLIST
 	public Postazione salva(Postazione postazione) {
 		this.postazioni.add(postazione);
 		return postazione;
