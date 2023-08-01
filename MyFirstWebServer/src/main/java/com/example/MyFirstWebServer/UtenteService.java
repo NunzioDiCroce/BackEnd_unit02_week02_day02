@@ -2,6 +2,7 @@ package com.example.MyFirstWebServer;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
@@ -36,5 +37,14 @@ public class UtenteService {
 	}
 
 	// METODO PER ELIMINARE UN UTENTE SPECIFICO
+	public void eliminaUtentePerId(long id) {
+		ListIterator<Utente> iterator = this.utenti.listIterator(); // ITERATORE PER MODIFICARE UNA LISTA
+		while (iterator.hasNext()) {
+			Utente utenteCorrente = iterator.next();
+			if (utenteCorrente.getId() == id) {
+				iterator.remove();
+			}
+		}
 
+	}
 }
